@@ -661,3 +661,178 @@ footer span {
         font-size: 12px;
     }
 }
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team {
+    padding: 120px 8%;
+    background: #08080d;
+    position: relative;
+    overflow: hidden;
+}
+
+.team::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #7c3cff;
+    filter: blur(180px);
+    opacity: 0.12;
+    top: 10%;
+    left: -200px;
+    pointer-events: none;
+}
+
+.team-container {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* TITLE */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: #9b5cff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    color: white;
+    font-size: 48px;
+    margin: 10px 0;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.section-title p {
+    color: #888;
+    font-size: 15px;
+}
+
+/* LEADER + PLAYERS */
+
+.president-card,
+.player-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid rgba(155, 92, 255, 0.25);
+    background: linear-gradient(
+        135deg,
+        rgba(20, 18, 30, 0.95),
+        rgba(10, 10, 16, 0.95)
+    );
+    border-radius: 18px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.president-card {
+    border-color: rgba(155, 92, 255, 0.55);
+    margin-bottom: 25px;
+    box-shadow: 0 0 35px rgba(124, 60, 255, 0.08);
+}
+
+.president-card:hover,
+.player-card:hover {
+    transform: translateY(-6px);
+    border-color: #9b5cff;
+    box-shadow: 0 15px 45px rgba(124, 60, 255, 0.18);
+}
+
+/* NUMBER */
+
+.player-number {
+    font-size: 38px;
+    font-weight: 900;
+    color: rgba(155, 92, 255, 0.25);
+    margin-right: 30px;
+    min-width: 55px;
+}
+
+/* PLAYER INFO */
+
+.player-info {
+    flex: 1;
+}
+
+.player-role {
+    color: #9b5cff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.player-info h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+/* BADGE */
+
+.player-badge {
+    padding: 9px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(155, 92, 255, 0.4);
+    color: #b987ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* PLAYERS */
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .team {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .president-card,
+    .player-card {
+        padding: 22px;
+    }
+
+    .player-number {
+        font-size: 26px;
+        margin-right: 18px;
+        min-width: 35px;
+    }
+
+    .player-info h3 {
+        font-size: 21px;
+    }
+
+    .player-badge {
+        display: none;
+    }
+
+    .players {
+        grid-template-columns: 1fr;
+    }
+}
