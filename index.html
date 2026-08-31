@@ -1,135 +1,797 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
-    <title>SG Esports</title>
-</head>
-
-<body>
-
-<header>
-    <div class="logo">SG</div>
-
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#team">TEAM</a>
-        <a href="#tryouts">TRYOUTS</a>
-        <a href="#socials">SOCIALS</a>
-    </nav>
-</header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
-<!-- HOME -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <p class="small-title">WELCOME TO</p>
-
-        <h1>SG ESPORTS</h1>
-
-        <p>
-            COMPETE. IMPROVE. DOMINATE.
-        </p>
-
-        <div class="buttons">
-            <a href="#tryouts" class="btn">JOIN SG</a>
-            <a href="#team" class="btn">OUR TEAM</a>
-        </div>
-
-    </div>
-
-</section>
+html {
+    scroll-behavior: smooth;
+}
 
 
-<!-- TEAM -->
+body {
+    font-family: Arial, Helvetica, sans-serif;
 
-<section id="team">
+    background: #050505;
 
-    <h2>OUR TEAM</h2>
+    color: white;
 
-    <p class="section-text">
-        Meet the players representing SG Esports.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>PLAYER 1</h3>
-            <p>SG Member</p>
-        </div>
-
-        <div class="card">
-            <h3>PLAYER 2</h3>
-            <p>SG Member</p>
-        </div>
-
-        <div class="card">
-            <h3>PLAYER 3</h3>
-            <p>SG Member</p>
-        </div>
-
-    </div>
-
-</section>
+    overflow-x: hidden;
+}
 
 
-<!-- TRYOUTS -->
+/* ================= NAVBAR ================= */
 
-<section id="tryouts">
+header {
 
-    <h2>TRYOUTS</h2>
+    position: fixed;
 
-    <p class="section-text">
-        Think you have what it takes to join SG Esports?
-    </p>
+    top: 0;
+    left: 0;
 
-    <div class="tryout-box">
+    width: 100%;
 
-        <h3>SG ESPORTS RECRUITMENT</h3>
+    height: 80px;
 
-        <p>
-            We are looking for skilled and motivated players.
-        </p>
+    display: flex;
 
-        <a href="#" class="btn">APPLY NOW</a>
+    align-items: center;
 
-    </div>
+    justify-content: space-between;
 
-</section>
+    padding: 0 7%;
 
+    background: rgba(5,5,5,0.85);
 
-<!-- SOCIALS -->
+    backdrop-filter: blur(15px);
 
-<section id="socials">
+    border-bottom: 1px solid #222;
 
-    <h2>SOCIALS</h2>
-
-    <p class="section-text">
-        Follow SG Esports and stay updated.
-    </p>
-
-    <div class="social-links">
-
-        <a href="#" class="social">TikTok</a>
-        <a href="#" class="social">YouTube</a>
-        <a href="#" class="social">Discord</a>
-
-    </div>
-
-</section>
+    z-index: 1000;
+}
 
 
-<footer>
+.logo {
 
-    <p>© 2026 SG Esports. All rights reserved.</p>
+    font-size: 32px;
 
-</footer>
+    font-weight: 1000;
 
-</body>
-</html>
+    letter-spacing: 4px;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+
+    opacity: 0.5;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #222 0%,
+            #090909 35%,
+            #050505 70%
+        );
+
+    overflow: hidden;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    background: #ffffff08;
+
+    filter: blur(100px);
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: heroIn 1s ease;
+}
+
+
+.hero-tag {
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 6px;
+
+    color: #888;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(
+        70px,
+        14vw,
+        180px
+    );
+
+    line-height: 0.8;
+
+    font-weight: 1000;
+
+    letter-spacing: 8px;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.hero-description {
+
+    margin-top: 35px;
+
+    color: #aaa;
+
+    letter-spacing: 7px;
+
+    font-weight: 800;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+
+    margin-top: 45px;
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    margin: 7px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-5px);
+
+    background: white;
+
+    color: black;
+
+}
+
+
+.btn.primary {
+
+    background: white;
+
+    color: black;
+}
+
+
+.btn.primary:hover {
+
+    background: transparent;
+
+    color: white;
+}
+
+
+/* SCROLL */
+
+.scroll {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #555;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    padding: 130px 8%;
+
+    text-align: center;
+
+    min-height: 70vh;
+}
+
+
+.dark {
+
+    background: #090909;
+
+}
+
+
+.section-header span {
+
+    color: #666;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.section-header h2 {
+
+    font-size: clamp(
+        45px,
+        7vw,
+        85px
+    );
+
+    margin-top: 15px;
+
+    letter-spacing: 4px;
+}
+
+
+.section-header p {
+
+    color: #777;
+
+    margin-top: 20px;
+
+    font-size: 17px;
+}
+
+
+/* ================= TEAM ================= */
+
+.team-grid {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+
+.player-card {
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: left;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #181818,
+            #080808
+        );
+
+    border: 1px solid #252525;
+
+    transition: 0.4s;
+}
+
+
+.player-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #666;
+}
+
+
+.player-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-size: 60px;
+
+    font-weight: 1000;
+
+    color: #222;
+}
+
+
+.player-card h3 {
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+}
+
+
+.player-card p {
+
+    margin-top: 8px;
+
+    color: #777;
+
+    font-weight: 800;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border: 1px solid #222;
+}
+
+
+.stat {
+
+    padding: 50px 20px;
+
+    border-right: 1px solid #222;
+}
+
+
+.stat:last-child {
+
+    border-right: none;
+}
+
+
+.stat strong {
+
+    display: block;
+
+    font-size: 55px;
+
+    font-weight: 1000;
+}
+
+
+.stat span {
+
+    color: #666;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================= TRYOUTS ================= */
+
+.tryout {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #222,
+            #0a0a0a
+        );
+
+    border: 1px solid #292929;
+}
+
+
+.tryout-label {
+
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.tryout h2 {
+
+    margin-top: 20px;
+
+    font-size: clamp(
+        45px,
+        8vw,
+        90px
+    );
+
+    line-height: 0.95;
+}
+
+
+.tryout h2 span {
+
+    color: #777;
+}
+
+
+.tryout > p {
+
+    max-width: 600px;
+
+    margin: 25px auto;
+
+    color: #888;
+
+    line-height: 1.6;
+}
+
+
+.requirements {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 35px 0;
+}
+
+
+.requirements div {
+
+    padding: 12px 18px;
+
+    border: 1px solid #333;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* ================= SOCIALS ================= */
+
+.social-grid {
+
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+}
+
+
+.social {
+
+    padding: 35px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid #282828;
+
+    background: #0d0d0d;
+
+    transition: 0.3s;
+}
+
+
+.social:hover {
+
+    transform: translateY(-8px);
+
+    background: white;
+
+    color: black;
+}
+
+
+.social strong {
+
+    display: block;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+}
+
+
+.social span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+
+    background: #030303;
+}
+
+
+.footer-logo {
+
+    font-size: 35px;
+
+    font-weight: 1000;
+
+    letter-spacing: 4px;
+}
+
+
+footer p {
+
+    margin-top: 15px;
+
+    color: #666;
+}
+
+
+footer span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color: #444;
+
+    font-size: 12px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes heroIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+
+    header {
+
+        padding: 0 20px;
+
+    }
+
+
+    nav {
+
+        gap: 10px;
+
+    }
+
+
+    nav a {
+
+        font-size: 9px;
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .stat {
+
+        border-bottom: 1px solid #222;
+
+    }
+
+
+    .social-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    nav a:nth-child(3) {
+
+        display: none;
+
+    }
+
+
+    nav a {
+
+        font-size: 8px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-description {
+
+        letter-spacing: 3px;
+
+        font-size: 12px;
+
+    }
+
+
+}
