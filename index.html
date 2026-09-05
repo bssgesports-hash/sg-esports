@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SG Esports - Brawl Stars Esports Organization">
 
-    <title>SG Esports | Brawl Stars</title>
+    <meta name="description" content="SG Esports - Brawl Stars Esports Team">
+    <meta name="theme-color" content="#08080d">
+
+    <title>SG Esports | Brawl Stars Esports</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">SG</div>
+<!-- =========================
+     LOADING SCREEN
+========================= -->
 
-    <nav>
+<div class="loader">
+    <div class="loader-logo">SG</div>
+    <div class="loader-text">SG ESPORTS</div>
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <a href="#home" class="logo">
+        SG
+    </a>
+
+    <nav id="nav">
+
         <a href="#home">HOME</a>
         <a href="#team">TEAM</a>
         <a href="#achievements">ACHIEVEMENTS</a>
         <a href="#tryouts">TRYOUTS</a>
         <a href="#socials">SOCIALS</a>
+
     </nav>
+
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+
 </header>
 
 
+<!-- =========================
+     HERO / HOME
+========================= -->
+
 <section id="home" class="hero">
+
+    <div class="hero-glow"></div>
 
     <div class="hero-content">
 
         <div class="hero-tag">
-            BRAWL STARS ESPORTS
+            🇨🇿 BRAWL STARS ESPORTS
         </div>
 
         <h1>
@@ -43,7 +74,13 @@
             COMPETE. IMPROVE. DOMINATE.
         </p>
 
+        <p class="hero-subtitle">
+            Welcome to SG Esports.
+            A competitive Brawl Stars team from Czech Republic.
+        </p>
+
         <div class="hero-buttons">
+
             <a href="#tryouts" class="btn primary">
                 JOIN SG
             </a>
@@ -51,6 +88,7 @@
             <a href="#team" class="btn">
                 OUR TEAM
             </a>
+
         </div>
 
     </div>
@@ -62,6 +100,10 @@
 </section>
 
 
+<!-- =========================
+     TEAM
+========================= -->
+
 <section id="team" class="section">
 
     <div class="section-header">
@@ -70,35 +112,115 @@
 
         <h2>OUR TEAM</h2>
 
-        <p>Meet the players representing SG Esports.</p>
+        <p>
+            Meet the players representing SG Esports.
+        </p>
 
     </div>
 
 
     <div class="team-grid">
 
+        <!-- LEADER -->
+
+        <div class="player-card featured">
+
+            <div class="player-number">
+                01
+            </div>
+
+            <div class="player-content">
+
+                <div class="player-role">
+                    ESPORT LEADER & PLAYER
+                </div>
+
+                <h3>
+                    🇨🇿 SG | fór Mondeo
+                </h3>
+
+                <p>
+                    PRESIDENT
+                </p>
+
+            </div>
+
+            <div class="player-badge">
+                LEADER
+            </div>
+
+        </div>
+
+
+        <!-- FILIP -->
+
         <div class="player-card">
-    <div class="player-number">01</div>
-    <h3>🇨🇿 SG | fór Mondeo</h3>
-    <p>ESPORT LEADER & PLAYER</p>
-</div>
 
-<div class="player-card">
-    <div class="player-number">02</div>
-    <h3>🇨🇿 SG | Filip</h3>
-    <p>ESPORT PLAYER</p>
-</div>
+            <div class="player-number">
+                02
+            </div>
 
-<div class="player-card">
-    <div class="player-number">03</div>
-    <h3>🇨🇿 SG | Oliver</h3>
-    <p>ESPORT PLAYER</p>
-</div>
+            <div class="player-content">
+
+                <div class="player-role">
+                    ESPORT PLAYER
+                </div>
+
+                <h3>
+                    🇨🇿 SG | Filip
+                </h3>
+
+                <p>
+                    ESPORT PLAYER
+                </p>
+
+            </div>
+
+            <div class="player-badge">
+                PLAYER
+            </div>
+
+        </div>
+
+
+        <!-- OLIVER -->
+
+        <div class="player-card">
+
+            <div class="player-number">
+                03
+            </div>
+
+            <div class="player-content">
+
+                <div class="player-role">
+                    ESPORT PLAYER
+                </div>
+
+                <h3>
+                    🇨🇿 SG | Oliver
+                </h3>
+
+                <p>
+                    ESPORT PLAYER
+                </p>
+
+            </div>
+
+            <div class="player-badge">
+                PLAYER
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     ACHIEVEMENTS
+========================= -->
 
 <section id="achievements" class="section dark">
 
@@ -108,37 +230,89 @@
 
         <h2>ACHIEVEMENTS</h2>
 
-        <p>The beginning of the SG Esports journey.</p>
+        <p>
+            The beginning of the SG Esports journey.
+        </p>
 
     </div>
 
 
-    <div class="stats">
+    <div class="stats-grid">
 
-        <div class="stat">
-            <strong>0</strong>
-            <span>TOURNAMENTS</span>
+        <div class="stat-card">
+
+            <div class="stat-number">
+                01
+            </div>
+
+            <h3>
+                TEAM
+            </h3>
+
+            <p>
+                SG Esports
+            </p>
+
         </div>
 
-        <div class="stat">
-            <strong>0</strong>
-            <span>WINS</span>
+
+        <div class="stat-card">
+
+            <div class="stat-number">
+                03
+            </div>
+
+            <h3>
+                PLAYERS
+            </h3>
+
+            <p>
+                Current roster
+            </p>
+
         </div>
 
-        <div class="stat">
-            <strong>0</strong>
-            <span>TROPHIES</span>
+
+        <div class="stat-card">
+
+            <div class="stat-number">
+                🇨🇿
+            </div>
+
+            <h3>
+                CZECH
+            </h3>
+
+            <p>
+                Based in Czech Republic
+            </p>
+
         </div>
 
-        <div class="stat">
-            <strong>2026</strong>
-            <span>FOUNDED</span>
-        </div>
+    </div>
+
+
+    <div class="achievement-message">
+
+        <span>MORE TO COME</span>
+
+        <h3>
+            THIS IS ONLY THE BEGINNING.
+        </h3>
+
+        <p>
+            SG Esports is just getting started.
+            More tournaments, results and achievements are on the way.
+        </p>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     TRYOUTS
+========================= -->
 
 <section id="tryouts" class="section">
 
@@ -158,15 +332,31 @@
             who want to compete, improve and grow with the team.
         </p>
 
+
         <div class="requirements">
 
-            <div>🎮 Brawl Stars</div>
-            <div>🏆 Competitive mindset</div>
-            <div>🤝 Teamwork</div>
-            <div>🔥 Motivation</div>
-            <div>🆓 FREE TRYOUT</div>
+            <div>
+                🎮 Brawl Stars
+            </div>
+
+            <div>
+                🏆 Competitive mindset
+            </div>
+
+            <div>
+                🤝 Teamwork
+            </div>
+
+            <div>
+                🔥 Motivation
+            </div>
+
+            <div>
+                🆓 FREE TRYOUT
+            </div>
 
         </div>
+
 
         <a href="#socials" class="btn primary">
             APPLY FOR TRYOUT
@@ -175,40 +365,105 @@
     </div>
 
 </section>
+
+
+<!-- =========================
+     SOCIALS
+========================= -->
+
 <section id="socials" class="section dark">
 
     <div class="section-header">
 
-        <span>CONNECT WITH US</span>
+        <span>FOLLOW SG</span>
 
         <h2>SOCIALS</h2>
 
-        <p>Follow SG Esports.</p>
+        <p>
+            Follow SG Esports and stay updated.
+        </p>
 
     </div>
 
 
     <div class="social-grid">
 
-        <a href="#" class="social">
-            <strong>TIKTOK</strong>
-            <span>@SGESPORTS</span>
+        <a href="#" class="social-card">
+
+            <span class="social-icon">
+                🎵
+            </span>
+
+            <div>
+                <h3>
+                    TIKTOK
+                </h3>
+
+                <p>
+                    SG Esports
+                </p>
+            </div>
+
+            <span class="social-arrow">
+                →
+            </span>
+
         </a>
 
-        <a href="#" class="social">
-            <strong>YOUTUBE</strong>
-            <span>SG Esports</span>
+
+        <a href="#" class="social-card">
+
+            <span class="social-icon">
+                ▶️
+            </span>
+
+            <div>
+                <h3>
+                    YOUTUBE
+                </h3>
+
+                <p>
+                    SG Esports
+                </p>
+            </div>
+
+            <span class="social-arrow">
+                →
+            </span>
+
         </a>
 
-        <a href="#" class="social">
-            <strong>DISCORD</strong>
-            <span>JOIN OUR SERVER</span>
+
+        <a href="#" class="social-card">
+
+            <span class="social-icon">
+                💬
+            </span>
+
+            <div>
+                <h3>
+                    DISCORD
+                </h3>
+
+                <p>
+                    Join our community
+                </p>
+            </div>
+
+            <span class="social-arrow">
+                →
+            </span>
+
         </a>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -217,15 +472,266 @@
     </div>
 
     <p>
-        SG Esports — Brawl Stars Esports Organization
+        © 2026 SG Esports. All rights reserved.
     </p>
 
-    <span>
-        © 2026 SG Esports
-    </span>
+    <p class="footer-tagline">
+        COMPETE. IMPROVE. DOMINATE.
+    </p>
 
 </footer>
 
+
+<!-- =========================
+     BACK TO TOP
+========================= -->
+
+<button id="backToTop" class="back-to-top">
+    ↑
+</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       LOADER
+    ========================= */
+
+    window.addEventListener("load", () => {
+
+        setTimeout(() => {
+
+            document.body.classList.add("loaded");
+
+        }, 500);
+
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("nav");
+
+    menuToggle.addEventListener("click", () => {
+
+        nav.classList.toggle("active");
+
+    });
+
+
+    /* Close menu after clicking */
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            nav.classList.remove("active");
+
+        });
+
+    });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".section-header, .player-card, .stat-card, .achievement-message, .tryout, .social-card"
+        );
+
+
+    const revealObserver = new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+    revealElements.forEach(element => {
+
+        element.classList.add("reveal");
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("visible");
+
+        } else {
+
+            backToTop.classList.remove("visible");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+            behavior: "smooth"
+
+        });
+
+    });
+
+
+    /* =========================
+       ACTIVE NAV
+    ========================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navLinks =
+        document.querySelectorAll("nav a");
+
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            if (window.scrollY >= sectionTop) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") === "#" + current
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       CARD TILT EFFECT
+    ========================= */
+
+    document.querySelectorAll(".player-card").forEach(card => {
+
+        card.addEventListener("mousemove", event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+            const centerX =
+                rect.width / 2;
+
+            const centerY =
+                rect.height / 2;
+
+            const rotateX =
+                (y - centerY) / 25;
+
+            const rotateY =
+                (centerX - x) / 25;
+
+            card.style.transform =
+                `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+
+        });
+
+
+        card.addEventListener("mouseleave", () => {
+
+            card.style.transform = "";
+
+        });
+
+    });
+
+
+    /* =========================
+       SMOOTH ANCHOR SCROLL
+    ========================= */
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function(event) {
+
+            const target =
+                document.querySelector(this.getAttribute("href"));
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
